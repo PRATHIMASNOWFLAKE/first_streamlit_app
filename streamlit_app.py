@@ -48,6 +48,6 @@ import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 #fruity_selected =requests.get("https://fruityvice.com/api/fruit/" + fruityvice_response )
 streamlit.text (fruityvice_response)
-streamlit.dataframe(fruity_selected)
+streamlit.dataframe(fruityvice_response)
 
 
