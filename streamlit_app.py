@@ -40,7 +40,7 @@ streamlit.header("Fruityvice Fruit Advice!")
 
 # don't run anything past here while we trouble shoot
 
-streamlit.stop()
+
 
 # take the json version of the response and normalise it
 
@@ -61,6 +61,8 @@ fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_c
 streamlit.text (fruityvice_response)
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 streamlit.dataframe(fruityvice_normalized)
+
+streamlit.stop()
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
