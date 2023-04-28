@@ -40,7 +40,7 @@ streamlit.header("Fruityvice Fruit Advice!")
 
 # don't run anything past here while we trouble shoot
 
-stremlit.stop()
+streamlit.stop()
 
 # take the json version of the response and normalise it
 
